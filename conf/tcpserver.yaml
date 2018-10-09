@@ -1,0 +1,22 @@
+log:
+  logfile: ../logs/tcpserver.log
+  loglevel: 7
+  maxdays: 7
+server:
+  port: 9999
+db:
+  host: 172.18.0.22:3306
+  user: root
+  passwd: passwOrd
+  db: jhouyang_entry_test
+  conn:
+    maxidle: 50
+    maxopen: 120
+redis:
+  addr: 172.18.0.23:6379
+  db: 1
+  passwd: ''
+  poolsize: 100
+  cache:
+    tokenexpired: 7200 # token cache info expired time 2 * 60 * 60
+    userexpired: 300   # user cache info expired time  5 * 60

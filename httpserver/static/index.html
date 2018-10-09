@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+ 
+    <link rel="stylesheet" type="text/css" href="css/login.css"/>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+    <script src="http://www.gongjuji.net/Content/files/jquery.md5.js"></script>
+</head>
+ 
+<body>
+<div>
+    <img src="" id="headurl" alt="你没有头像，可以上传一个">
+    <p>
+	选择文件:
+	<input type="file" id="ipt-file"/>
+	<button type="button" id="btn_upload">上传</button>
+	</p>
+	<div class="progress-bar">
+	<div class="progress"  id="progress"></div>
+	</div>
+    <p id="info"></p>
+</div>
+<div id="user_frame">
+    <p><label class="label_input">用户名</label><input type="text" id="username" class="text_field"/></p>
+    <p><label class="label_input">昵称</label><input type="text" id="nickname" class="text_field"/></p>
+    <div id="login_control">
+        <input type="button" id="btn_edit" value="修改昵称"/>
+        <input type="button" id="btn_logout" value="登出"/>
+     </div>
+</div>
+ 
+</body>
+</html>
+<script>
+    function getQueryVariable(variable) {
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+    }
+    var button = document.querySelector("#btn_upload"),
+    input = document.querySelector("#ipt-file"),
+    progress = document.querySelector("#progress"),
+    info = document.querySelector("#info");
+
+    var headurl = document.getElementById('headurl')
+    var username = document.getElementById('username')
+    from_username = getQueryVariable('name')
+    console.log("username:" + from_username)
+    username.value = from_username
+    username.setAttribute('readOnly', true)
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('get', 'http://192.168.33.10:8080/getuserinfo?username=' + from_username);
+    xhr.send()
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            console.log(xhr.responseText)
+            var json = eval("("+xhr.responseText+")")
+
+            if (json.code != 0) {
+                console.log(json.msg)
+                alert("请先登录!" + json.msg)
+                window.location.href = "http://192.168.33.10:8080/static/login.html"
+            }
+
+            username.value = json.data.username
+            nickname.value = json.data.nickname
+            previousNickname = json.data.nickname
+
+            if (json.data.headurl != "") {
+                console.log("set headurl:" + json.data.headurl)
+                headurl.src = json.data.headurl
+            }
+        }
+    }
+
+    btn_logout.onclick = function() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('post', 'http://192.168.33.10:8080/logout')
+        xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded")
+        xhr.send("username=" + from_username)
+        console.log("send to logout")
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                var json = eval("("+xhr.responseText+")");
+                if (json.code == 0) {
+                    alert('登出成功!')
+                } else {
+                    alert("登出失败:" + json.msg)
+                }
+            }
+        }
+    }
+
+    btn_edit.onclick = function() {
+        var newNickname = nickname.value
+        if (newNickname.length < 1) {
+            alert('昵称长度不能小于1')
+            return
+        }
+
+        if (newNickname == previousNickname) {
+            alert('昵称没有改变')
+            return
+        }
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('post', 'http://192.168.33.10:8080/editnickname')
+        xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded")
+        xhr.send('newnickname=' + newNickname + "&username=" + from_username)
+        console.log("send to editnickname")
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                var json = eval("("+xhr.responseText+")");
+                if (json.code == 0) {
+                    alert('修改成功')
+                } else {
+                    alert("修改失败:" + json.msg)
+                }
+            }
+        }
+    }
+
+    var upload = function() {
+	if (input.files.length === 0) {
+		console.log("未选择文件");
+		return;
+	}
+
+	var formData = new FormData();
+	formData.append("picture", input.files[0]);
+
+	var xhr = new XMLHttpRequest();
+	xhr.onreadystatechange = function() {
+		if (xhr.readyState === 4 && xhr.status === 200) {
+			console.log(xhr.responseText);
+			var json = eval("(" + xhr.responseText + ")");
+			if (json.code == 0 && json.data.headurl != "") {
+				headurl.src = json.data.headurl
+			} else {
+				alert("修改头像失败:" + json.msg)
+			}
+		}
+	};
+
+	xhr.upload.addEventListener("progress", function(event) {
+			if(event.lengthComputable){
+			progress.style.width = Math.ceil(event.loaded * 100 / event.total) + "%";
+			}
+			}, false);
+
+        xhr.open('post', 'http://192.168.33.10:8080/uploadpic?username=' + from_username)
+	xhr.send(formData);
+    }
+    button.addEventListener("click", upload, false);
+</script>
+

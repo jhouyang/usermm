@@ -1,0 +1,30 @@
+2018/10/08 11:40:23.086 [I] [main.go:48]  init successfully!
+2018/10/08 11:40:23.086 [I] [userserver.go:131]  start to listen on localhost:9999
+2018/10/08 11:41:16.579 [D] [userserver.go:39]  5127e66a443747412ed1c1e527d50c85  -- Login access from: test @ 098f6bcd4621d373cade4e832627b4f6
+2018/10/08 11:41:16.582 [D] [userserver.go:60]  5127e66a443747412ed1c1e527d50c85  -- Login succesfully,  test @ 098f6bcd4621d373cade4e832627b4f6  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:41:16.917 [D] [userserver.go:68]  5c2db3923ce040ca32c27e01f43eaba4  -- GetUserInfo access from: test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:41:16.918 [D] [userserver.go:87]  5c2db3923ce040ca32c27e01f43eaba4  -- Succ to GetUserInfo : test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:41:47.680 [D] [userserver.go:68]  e599d5a42517e1c74982f8aab484c3b2  -- GetUserInfo access from: test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:41:47.681 [D] [userserver.go:87]  e599d5a42517e1c74982f8aab484c3b2  -- Succ to GetUserInfo : test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:41:50.517 [D] [userserver.go:68]  fa1785689bd95549714912a3e78da857  -- GetUserInfo access from: test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:41:50.518 [D] [userserver.go:87]  fa1785689bd95549714912a3e78da857  -- Succ to GetUserInfo : test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:42:04.488 [D] [userserver.go:68]  eca3ecbd2dae5060afda9b90b5bd6610  -- GetUserInfo access from: test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:42:04.489 [D] [userserver.go:87]  eca3ecbd2dae5060afda9b90b5bd6610  -- Succ to GetUserInfo : test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:43:14.255 [D] [userserver.go:68]  03259933ccb5f57023b82ca62f2f0c38  -- GetUserInfo access from: test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:43:14.255 [D] [userserver.go:87]  03259933ccb5f57023b82ca62f2f0c38  -- Succ to GetUserInfo : test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:43:18.760 [D] [userserver.go:68]  3f85ae0dc4c96ae2638fa159563b537c  -- GetUserInfo access from: test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:43:18.760 [D] [userserver.go:87]  3f85ae0dc4c96ae2638fa159563b537c  -- Succ to GetUserInfo : test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:44:44.491 [D] [userserver.go:68]  69c6783550aac0dfb1533371b6319284  -- GetUserInfo access from: test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:44:44.492 [D] [userserver.go:87]  69c6783550aac0dfb1533371b6319284  -- Succ to GetUserInfo : test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:44:55.367 [D] [userserver.go:68]  123313e08ed7be9054eeaa6ae983f27c  -- GetUserInfo access from: test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:44:55.367 [D] [userserver.go:87]  123313e08ed7be9054eeaa6ae983f27c  -- Succ to GetUserInfo : test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:44:55.370 [D] [userserver.go:95]  123313e08ed7be9054eeaa6ae983f27c  -- EditUserInfo access from: test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:44:55.373 [E] [userserver.go:103]  123313e08ed7be9054eeaa6ae983f27c  -- Succ to edit userinfo, affected rows is: 1
+2018/10/08 11:45:05.089 [D] [userserver.go:68]  cbd228e8f210fc31f2f43191a9b7a95d  -- GetUserInfo access from: test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:45:05.090 [D] [userserver.go:87]  cbd228e8f210fc31f2f43191a9b7a95d  -- Succ to GetUserInfo : test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:45:05.091 [D] [userserver.go:95]  cbd228e8f210fc31f2f43191a9b7a95d  -- EditUserInfo access from: test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:45:05.096 [E] [userserver.go:103]  cbd228e8f210fc31f2f43191a9b7a95d  -- Succ to edit userinfo, affected rows is: 1
+2018/10/08 11:45:14.282 [D] [userserver.go:111]  4c7ad49794b1489c84aadefc56331a4e  -- Logout access from: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:45:14.282 [D] [userserver.go:116]  4c7ad49794b1489c84aadefc56331a4e  -- Succ to logout: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:45:16.323 [D] [userserver.go:68]  8be2d1614cf39e41efba82c6f87417de  -- GetUserInfo access from: test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:45:16.323 [E] [userserver.go:78]  8be2d1614cf39e41efba82c6f87417de  -- Failed to get token: ede321bbad5197ba8591c0ff712b51c2  with err: redis: nil

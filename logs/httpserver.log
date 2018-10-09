@@ -1,0 +1,46 @@
+2018/10/08 11:41:16.579 [D] [handler.go:38]  5127e66a443747412ed1c1e527d50c85  -- loginHandler access from: test @ 098f6bcd4621d373cade4e832627b4f6
+2018/10/08 11:41:16.582 [D] [userclient.go:106]  5127e66a443747412ed1c1e527d50c85  -- Succ get token: ede321bbad5197ba8591c0ff712b51c2  code: 0
+2018/10/08 11:41:16.582 [D] [handler.go:45]  5127e66a443747412ed1c1e527d50c85  -- Set token  ede321bbad5197ba8591c0ff712b51c2 with expire: 86400
+2018/10/08 11:41:16.582 [D] [handler.go:48]  5127e66a443747412ed1c1e527d50c85  -- Succ get response from backend with 0  and msg: succ
+2018/10/08 11:41:16.917 [D] [handler.go:178]  access from: test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:41:16.917 [D] [handler.go:192]  5c2db3923ce040ca32c27e01f43eaba4  -- getUserinfoHandler access from: test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:41:16.918 [D] [handler.go:195]  5c2db3923ce040ca32c27e01f43eaba4  -- Succ to get response from backend with  0  and msg: succ
+2018/10/08 11:41:47.680 [D] [handler.go:111]  access from: test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:41:47.680 [D] [handler.go:119]  e599d5a42517e1c74982f8aab484c3b2  -- uploadHeadurlHandler access from: test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:41:47.681 [D] [handler.go:127]  e599d5a42517e1c74982f8aab484c3b2  -- uploadHeadurlHandler Auth succ
+2018/10/08 11:41:47.833 [E] [handler.go:150]  e599d5a42517e1c74982f8aab484c3b2  -- Filesize illegal, size: 17954262
+2018/10/08 11:41:50.517 [D] [handler.go:178]  access from: test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:41:50.517 [D] [handler.go:192]  fa1785689bd95549714912a3e78da857  -- getUserinfoHandler access from: test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:41:50.518 [D] [handler.go:195]  fa1785689bd95549714912a3e78da857  -- Succ to get response from backend with  0  and msg: succ
+2018/10/08 11:42:04.487 [D] [handler.go:111]  access from: test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:42:04.487 [D] [handler.go:119]  eca3ecbd2dae5060afda9b90b5bd6610  -- uploadHeadurlHandler access from: test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:42:04.489 [D] [handler.go:127]  eca3ecbd2dae5060afda9b90b5bd6610  -- uploadHeadurlHandler Auth succ
+2018/10/08 11:42:04.597 [E] [handler.go:150]  eca3ecbd2dae5060afda9b90b5bd6610  -- Filesize illegal, size: 17954262
+2018/10/08 11:43:14.253 [D] [handler.go:178]  access from: test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:43:14.253 [D] [handler.go:192]  03259933ccb5f57023b82ca62f2f0c38  -- getUserinfoHandler access from: test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:43:14.255 [D] [handler.go:195]  03259933ccb5f57023b82ca62f2f0c38  -- Succ to get response from backend with  0  and msg: succ
+2018/10/08 11:43:18.759 [D] [handler.go:111]  access from: test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:43:18.759 [D] [handler.go:119]  3f85ae0dc4c96ae2638fa159563b537c  -- uploadHeadurlHandler access from: test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:43:18.761 [D] [handler.go:127]  3f85ae0dc4c96ae2638fa159563b537c  -- uploadHeadurlHandler Auth succ
+2018/10/08 11:43:18.869 [E] [handler.go:150]  3f85ae0dc4c96ae2638fa159563b537c  -- Filesize illegal, size: 17954262
+2018/10/08 11:44:44.490 [D] [handler.go:178]  access from: test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:44:44.490 [D] [handler.go:192]  69c6783550aac0dfb1533371b6319284  -- getUserinfoHandler access from: test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:44:44.492 [D] [handler.go:195]  69c6783550aac0dfb1533371b6319284  -- Succ to get response from backend with  0  and msg: succ
+2018/10/08 11:44:55.365 [D] [handler.go:111]  access from: test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:44:55.366 [D] [handler.go:119]  123313e08ed7be9054eeaa6ae983f27c  -- uploadHeadurlHandler access from: test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:44:55.367 [D] [handler.go:127]  123313e08ed7be9054eeaa6ae983f27c  -- uploadHeadurlHandler Auth succ
+2018/10/08 11:44:55.369 [D] [handler.go:154]  123313e08ed7be9054eeaa6ae983f27c  -- uploadHeadurlHandler CheckImage succ
+2018/10/08 11:44:55.370 [D] [handler.go:164]  123313e08ed7be9054eeaa6ae983f27c  -- Succ to save upload image, path: upload/images/0c64f85b89bcf5620c62634e20070cd5.png
+2018/10/08 11:44:55.373 [D] [handler.go:169]  123313e08ed7be9054eeaa6ae983f27c  -- editUserInfo response: 200
+2018/10/08 11:45:05.088 [D] [handler.go:111]  access from: test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:45:05.088 [D] [handler.go:119]  cbd228e8f210fc31f2f43191a9b7a95d  -- uploadHeadurlHandler access from: test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:45:05.090 [D] [handler.go:127]  cbd228e8f210fc31f2f43191a9b7a95d  -- uploadHeadurlHandler Auth succ
+2018/10/08 11:45:05.090 [D] [handler.go:154]  cbd228e8f210fc31f2f43191a9b7a95d  -- uploadHeadurlHandler CheckImage succ
+2018/10/08 11:45:05.090 [D] [handler.go:164]  cbd228e8f210fc31f2f43191a9b7a95d  -- Succ to save upload image, path: upload/images/c6c1910c450b53b83401f3b470d22ecc.jpg
+2018/10/08 11:45:05.096 [D] [handler.go:169]  cbd228e8f210fc31f2f43191a9b7a95d  -- editUserInfo response: 200
+2018/10/08 11:45:14.280 [D] [handler.go:69]  4c7ad49794b1489c84aadefc56331a4e  -- logoutHandler access from: test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:45:14.283 [D] [userclient.go:131]  4c7ad49794b1489c84aadefc56331a4e Succ to get response from backend with  0  and msg: succ
+2018/10/08 11:45:14.283 [D] [handler.go:74]  4c7ad49794b1489c84aadefc56331a4e  -- Succ to get response from backend with  0  and msg: succ
+2018/10/08 11:45:16.322 [D] [handler.go:178]  access from: test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:45:16.322 [D] [handler.go:192]  8be2d1614cf39e41efba82c6f87417de  -- getUserinfoHandler access from: test  with token: ede321bbad5197ba8591c0ff712b51c2
+2018/10/08 11:45:16.324 [D] [handler.go:195]  8be2d1614cf39e41efba82c6f87417de  -- Succ to get response from backend with  1201  and msg: tcp server: token expired

@@ -1,0 +1,67 @@
+syntax = "proto3";
+
+package proto;
+
+message loginRequest {
+    // user name
+    string username = 1;
+    // passwd
+    string passwd = 2;
+}
+
+message loginResponse {
+    // user name
+    string username = 1;
+    string nickname = 2;
+
+    // head url
+    string headurl = 3;
+    // token
+    string token = 4;
+
+    // result code
+    uint32 code = 5;
+    // result msg
+    string msg = 6;
+}
+
+message commRequest {
+    // token
+    string token = 1;
+    // username
+    string username = 2;
+}
+
+message editRequest {
+    // username
+    string username = 1;
+    // token
+    string token = 2;
+    // nickname
+    string nickname = 3;
+    // headurl
+    string headurl = 4;
+    // edit mode
+    // 1 for nickname; 2 for headurl; 3 for all
+    uint32 mode = 5;
+}
+
+message editResponse {
+    uint32 code = 1;
+    string msg = 2;
+}
+
+service UserService {
+    rpc login (loginRequest) returns (loginResponse) {
+    }
+
+    rpc getUserInfo (commRequest) returns (loginResponse) {
+    }
+
+    rpc editUserInfo (editRequest) returns (editResponse) {
+    }
+
+    rpc logout(commRequest) returns (editResponse) {
+    }
+}
+
