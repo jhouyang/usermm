@@ -44,7 +44,7 @@ install apache tools
 
 test with web client
 ```
-    http://192.168.33.10:8080/static/login.html
+    http://localhost:8080/static/login.html
     username/pwd : test/test
 ```
 
