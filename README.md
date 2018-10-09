@@ -1,4 +1,4 @@
-Entry Task
+Simple User-Management system
 ===========================
 
 Requirements
