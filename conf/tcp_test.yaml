@@ -5,15 +5,15 @@ log:
 server:
   port: 9999
 db:
-  host: 172.18.0.22:3306
-  user: root
-  passwd: passwOrd
+  host: 127.0.0.1:3306
+  user: user
+  passwd: passwd
   db: jhouyang_entry_test
   conn:
     maxidle: 50
     maxopen: 120
 redis:
-  addr: 172.18.0.23:6379
+  addr: 127.0.0.1:6379
   db: 1
   passwd: ''
   poolsize: 100
